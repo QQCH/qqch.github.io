@@ -13,7 +13,7 @@ display: block;
 clear: both; }
 
 h1.title {
-font-size: 36px;
+font-size: 42px;
 font-weight: normal;
 margin: 0;
 display: block;
@@ -36,18 +36,26 @@ h1.supperTitle {
   clear: both; }
 
 .game-intro {
-  float: left;
+  text-align: right;
   line-height: 42px;
   margin-bottom: 0;
-  width: 200px;
+  width: 500px;
   font-size: 14px;}
 .game-intro-strong {
   float: left;
   line-height: 42px;
   margin-bottom: 0;
-  width: 200px;
+  width: 500px;
   font-weight: bold;
   font-size: 14px;}
+
+.game-tips {
+  float: left;
+  line-height: 42px;
+  margin-bottom: 0;
+  width: 500px;
+  font-weight: bold;
+  font-size: 25px;}
 
 .restart-button {
   display: inline-block;
@@ -61,7 +69,7 @@ h1.supperTitle {
   display: block;
   text-align: center;
   float: right;
-  margin-left: 5px;
+  margin-left: 10px;
   font-size: 16px; }
 
 .tips-button {
@@ -76,20 +84,20 @@ h1.supperTitle {
   display: block;
   text-align: center;
   float: right;
-  margin-left: 3px;
+  margin-left: 10px;
   font-size: 16px; }
 
-  .switch-button {
-    display: inline-block;
-    background: #ffffff;
-    border: 2px solid #000000;
-    padding: 0 20px;
-    text-decoration: none;
-    color: #000000;
-    height: 40px;
-    line-height: 42px;
-    display: block;
-    text-align: center;
-    float: right;
-    margin-left: 3px;
-    font-size: 16px; }
+.switch-button {
+  display: inline-block;
+  background: #ffffff;
+  border: 2px solid #000000;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #000000;
+  height: 40px;
+  line-height: 42px;
+  display: block;
+  text-align: center;
+  float: right;
+  margin-left: 10px;
+  font-size: 16px; }

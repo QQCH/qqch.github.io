@@ -5,6 +5,7 @@ var btnSwitch = document.getElementById('switch');
 var next = document.getElementById('next');
 var textConfig = document.getElementById('config');
 var result = document.getElementById('resList');
+var nextRun = document.getElementById('nextRun');
 /**
  * Fisher–Yates shuffle
  */
@@ -25,7 +26,7 @@ Array.prototype.shuffle = function() {
 var cards =[];
 
 
-btnRestart.onclick = function(){
+nextRun.onclick = btnRestart.onclick = function(){
     if(cards.length<1)
     {
         for(var i=1;i<5;i++){
@@ -43,14 +44,14 @@ btnRestart.onclick = function(){
     }
 
     next4cards();
-    
-    //alert(cards.toString());
-    //calc24(2,3,3,4);
-    
 }
 
 var numbers = [];
 btnTips.onclick = function () {
+    while(result.hasChildNodes()){
+        result.removeChild(result.firstChild);
+    }
+
     if(numbers.length === 4){
         var res = calc24(numbers[0],numbers[1],numbers[2],numbers[3]);
         var len = res.length>5? 5: res.length;
@@ -61,18 +62,16 @@ btnTips.onclick = function () {
             result.appendChild(li);
         }
     }
-
-
 }
 
 var isNormal = true;
 btnSwitch.onclick = function () {
-    if(isNormal){
+    if(!isNormal){
         textConfig.textContent= "NORMAL- J:11 Q:12 K:13";
-        isNormal= false;
+        isNormal= true;
     }else{
         textConfig.textContent= "SIMPLE- J:2 Q:3 K:4";
-        isNormal= true;
+        isNormal= false;
     }
 }
 
